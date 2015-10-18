@@ -1,12 +1,49 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
                     "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
-  <script src="http://code.jquery.com/jquery-latest.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
-</head>
-<body>
+	<head>
+		<link rel="stylesheet" type="text/css" href="quotes.css">
+	</head>
+	<body>
+			<div class="container">
 
-</body>
+			</div>
+
+			<script type="text/template" id="allClientsTemplate">
+			<ul class="type-links">
+				<li class="all-link"><a href="#all">ALL QUOTES</a></li>
+				<li class="movies-link"><a href="#movies">MOVIE QUOTES</a></li>
+				<li class="games-link"><a href="#games">GAME QUOTES</a></li>
+			</ul>
+				<table>
+					<tr class='header-row'>
+	            		<th> Quote </th>
+	            		<th> Source </th>
+	            		<th> Context </th>
+	            		<th> Theme </th>
+		          	</tr>
+				    <% _.each(clients, function(client) { %>
+				    		<div id="page1">
+						        <tr>
+					          		<td class="quote"><%- client.quote %></td>
+					          		<td class="source"><%- client.source %></td>
+					          		<td class="context"><%- client.context %></td>
+					          		<td class="theme"><%- client.theme %></td>
+						        </tr>
+					        </div> 
+			        <% }); %> 
+			    </table>
+			    <p class="pages">Pages:</p>
+			    <ul class="page-links">
+			    	<li class="active page-link"><a href="#page1">1</a></li>
+			    	<li class="page-link"><a href="#page2">2</a></li>
+			    	<li class="page-link"><a href="#page3">3</a></li>
+			    </ul>   
+			</script>
+
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+		<script src="quotes.js"></script>			
+	</body>
 </html>
