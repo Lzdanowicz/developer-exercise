@@ -1,0 +1,41 @@
+ul.page-links {
+	text-align: center;
+	padding: none;
+}
+
+.pages { 
+	margin-top: 25px;
+	text-align: center;
+}
+
+li {
+	list-style: none;
+	display: inline-block;
+	margin-right: 45px;
+}
+
+a {
+	text-decoration: none;
+}
+
+li.active {
+	text-decoration: underline;
+}
+
+table {
+	padding: 0 60px;
+}
+
+th {
+	padding: 25px 0;
+}
+
+td {
+	padding: 15px 0;
+	text-align: center;
+}
+
+td.quote {
+	width: 45%;
+	text-align: left;
+}
