@@ -9,7 +9,7 @@
 
 			</div>
 
-			<script type="text/template" id="allClientsTemplate">
+			<script type="text/template" id="allQuotesTemplate">
 			<ul class="type-links">
 				<li class="all-link"><a href="#all">ALL QUOTES</a></li>
 				<li class="movies-link"><a href="#movies">MOVIE QUOTES</a></li>
@@ -22,13 +22,13 @@
 	            		<th> Context </th>
 	            		<th> Theme </th>
 		          	</tr>
-				    <% _.each(clients, function(client) { %>
+				    <% _.each(quotes, function(quote) { %>
 				    		<div id="page1">
 						        <tr>
-					          		<td class="quote"><%- client.quote %></td>
-					          		<td class="source"><%- client.source %></td>
-					          		<td class="context"><%- client.context %></td>
-					          		<td class="theme"><%- client.theme %></td>
+					          		<td class="quote"><%- quote.quote %></td>
+					          		<td class="source"><%- quote.source %></td>
+					          		<td class="context"><%- quote.context %></td>
+					          		<td class="theme"><%- quote.theme %></td>
 						        </tr>
 					        </div> 
 			        <% }); %> 
